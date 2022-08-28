@@ -1,22 +1,24 @@
-import path from 'path'
-import { defineConfig } from 'vite'
-import Vue from '@vitejs/plugin-vue'
-import Pages from 'vite-plugin-pages'
-import generateSitemap from 'vite-ssg-sitemap'
-import Icons from 'unplugin-icons/vite'
-import IconsResolver from 'unplugin-icons/resolver'
-import Layouts from 'vite-plugin-vue-layouts'
-import Components from 'unplugin-vue-components/vite'
-import AutoImport from 'unplugin-auto-import/vite'
-import { VitePWA } from 'vite-plugin-pwa'
-import VueI18n from '@intlify/vite-plugin-vue-i18n'
-import Inspect from 'vite-plugin-inspect'
+import path from 'path';
+import { defineConfig } from 'vite';
+import Vue from '@vitejs/plugin-vue';
+import Pages from 'vite-plugin-pages';
+import generateSitemap from 'vite-ssg-sitemap';
+import Icons from 'unplugin-icons/vite';
+import IconsResolver from 'unplugin-icons/resolver';
+import Layouts from 'vite-plugin-vue-layouts';
+import Components from 'unplugin-vue-components/vite';
+import AutoImport from 'unplugin-auto-import/vite';
+import { VitePWA } from 'vite-plugin-pwa';
+import VueI18n from '@intlify/vite-plugin-vue-i18n';
+import VueTypeImports from 'vite-plugin-vue-type-imports';
+import Inspect from 'vite-plugin-inspect';
 
 
 export default defineConfig({
   resolve: {
     alias: {
       '~/': `${path.resolve(__dirname, 'src')}/`,
+      '~setup/': `${path.resolve(__dirname, 'setup')}/`,
     },
   },
 
@@ -89,9 +91,12 @@ export default defineConfig({
       include: [path.resolve(__dirname, 'locales/**')],
     }),
     Inspect(),
+    // temporary fix until support is added in vue
+    // see: https://github.com/vuejs/core/issues/4294#issuecomment-984033739
+    VueTypeImports(),
   ],
   test: {
-    include: ['test/**/*.test.ts'],
+    setupFiles: ['setup/testing/unit.setup.ts'],
     environment: 'jsdom',
     deps: {
       inline: ['@vue', '@vueuse', 'vue-demi'],

@@ -1,6 +1,8 @@
 @import 'reset';
 @import (css) url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 
+@small:  ~"only screen and (max-width: 1024px)";
+
 html {
   font-size: 87.5%;
   font-family: 'Roboto', sans-serif;
@@ -53,6 +55,9 @@ body {
       padding: 1.429rem 0;
       width: 95%;
       margin: auto;
+      @media @small {
+        flex-direction: column;
+      }
 
       .top-logo {
         padding: 0.571rem;
@@ -62,6 +67,9 @@ body {
         border-radius: 8px;
       }
       .top-menu {
+        @media @small {
+          margin: auto;
+        }
         ul {
           flex-flow: row nowrap;
           display: flex;
@@ -99,6 +107,9 @@ body {
         display: flex;
         .mixin-padding-container();
         gap: 1.571rem;
+        @media @small {
+          flex-direction: column;
+        }
 
         .recommended {
           position: absolute;
@@ -115,6 +126,9 @@ body {
         img {
           border-radius: 14px;
           height: max-content;
+          @media @small {
+            margin: auto;
+          }
         }
         .book-info {
           .title {
@@ -146,7 +160,6 @@ body {
         }
         .books-list {
           display: flex;
-          flex: 1;
           flex-wrap: wrap;
           justify-content: center;
           gap: 2rem;
@@ -163,16 +176,37 @@ body {
             position: relative;
             padding: 1.8rem;
             border-radius: 16px;
+            @media @small {
+              max-width: 100%;
+              flex-direction: row;
+            }
 
             .position {
               position: absolute;
-              right: 0;
+              right: 1rem;
+              top: 1rem;
+              border: 2px solid #EEC000;
+              border-radius: 50%;
+              color: #EEC000;
+              font-weight: 500;
+              width: 2rem;
+              height: 2rem;
+
+              span {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+              }
             }
             img {
               border-radius: 14px;
               max-height: 260px;
               margin: 0 auto;
               box-shadow: 0 3px 10px 1px rgba(0,0,0,0.2);
+              @media @small{
+                align-self: center;
+              }
             }
             .book-info {
               .title {

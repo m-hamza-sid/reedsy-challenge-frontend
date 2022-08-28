@@ -21,7 +21,7 @@
   }
 
   #nprogress .bar {
-    @apply bg-teal-600 opacity-75;
+    @apply bg-amber-600 opacity-75;
 
     position: fixed;
     z-index: 1031;
@@ -36,10 +36,10 @@
 @layer utilities {
   .btn {
     @apply px-4 py-1 rounded inline-block
-    bg-teal-600 text-white cursor-pointer
-    hover:bg-teal-700
+    bg-amber-500 text-white cursor-pointer
+    hover:bg-amber-400
     disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50
-    focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2
+    focus:outline-none focus:ring-2 focus:ring-amber-300 focus:ring-offset-2
     dark:focus:ring-offset-gray-800;
   }
 
@@ -48,17 +48,22 @@
     text-gray-600 cursor-pointer
     hover:underline
     disabled:cursor-default disabled:opacity-50
-    focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 focus:underline
+    focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 focus:underline
     dark:focus:ring-offset-gray-800;
   }
 
   .icon-btn {
     @apply inline-block cursor-pointer select-none
     opacity-75 transition duration-200 ease-in-out rounded
-    hover:opacity-100 hover:text-teal-600
-    focus:active:outline-none focus:active:ring-2 focus:active:ring-teal-400 focus:active:ring-offset-2
+    hover:opacity-100 hover:text-amber-600
+    focus:active:outline-none focus:active:ring-2 focus:active:ring-amber-400 focus:active:ring-offset-2
     dark:focus:active:ring-offset-gray-800;
     font-size: 0.9em;
   }
-
+  .input {
+    @apply bg-gray-50 border border-amber-500 text-gray-900 text-sm rounded-md
+    p-2.5
+    dark:bg-stone-900 dark:border-stone-600 dark:placeholder-stone-400 dark:text-white
+    focus:outline-none focus:border-transparent focus:ring focus:ring-amber-500;
+  }
 }

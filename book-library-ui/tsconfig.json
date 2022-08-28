@@ -22,7 +22,8 @@
       "vite-plugin-vue-layouts/client"
     ],
     "paths": {
-      "~/*": ["src/*"]
+      "~/*": ["src/*"],
+      "~setup/*": ["setup/*"]
     }
   },
   "exclude": ["dist", "node_modules", "cypress"]

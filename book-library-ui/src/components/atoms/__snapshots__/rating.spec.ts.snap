@@ -1,0 +1,5 @@
+// Vitest Snapshot v1
+
+exports[`author > should render with name prop 1`] = `"<div class=\\"text-left\\">some name</div>"`;
+
+exports[`rating > should render with rating prop 1`] = `"<span> (05 / 10) </span>"`;

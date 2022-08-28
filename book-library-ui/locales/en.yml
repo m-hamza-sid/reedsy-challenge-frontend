@@ -6,6 +6,17 @@ button:
   toggle_langs: Change languages
 intro:
   desc: Reedsy Task
-book:
-  title:
-not-found: Not found
+pages:
+  book-list:
+    title: Top books of all time
+  book-single:
+    synopsis: Synopsis
+    comments: Comments
+  not-found: Not found
+atoms:
+  upvote-button: Upvote
+  upvoted-button: Upvoted
+  upvote-count:
+    text: Upvoted
+    times-plural: times
+    times-singular: time

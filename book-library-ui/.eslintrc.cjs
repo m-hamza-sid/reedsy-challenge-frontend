@@ -9,13 +9,13 @@ module.exports = {
     "@vue/eslint-config-prettier",
     "@vue/typescript/recommended",
     "plugin:prettier/recommended",
-    "./.eslintrc-auto-import.json",
+    "./.eslintrc-auto-import.json"
   ],
   env: {
     "vue/setup-compiler-macros": true,
-    node: true,
+    node: true
   },
   rules: {
-    "vue/multi-word-component-names": "off",
+    "vue/multi-word-component-names": "off"
   }
-}
+};

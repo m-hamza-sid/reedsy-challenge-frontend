@@ -1,0 +1,5 @@
+// Vitest Snapshot v1
+
+exports[`author > should render with name prop 1`] = `"<div class=\\"text-left\\">some name</div>"`;
+
+exports[`book-title > should render with title prop 1`] = `"<h2 class=\\"text-2xl text-left font-bold\\">some title</h2>"`;

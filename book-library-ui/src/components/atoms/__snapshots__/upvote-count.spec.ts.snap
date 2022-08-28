@@ -1,0 +1,7 @@
+// Vitest Snapshot v1
+
+exports[`upvote-count > should not render anything if count is 0 1`] = `"<!--v-if-->"`;
+
+exports[`upvote-count > should not render anything if count is null 1`] = `"<!--v-if-->"`;
+
+exports[`upvote-count > should render with upVoteCount prop 1`] = `"<span>atoms.upvote-count.text 2 atoms.upvote-count.times-plural</span>"`;

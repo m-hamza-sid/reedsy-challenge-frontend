@@ -7,13 +7,29 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    Counter: typeof import('./components/Counter.vue')['default']
-    Footer: typeof import('./components/Footer.vue')['default']
+    Author: typeof import('./components/atoms/author.vue')['default']
+    BookList: typeof import('./components/molecules/book-list.vue')['default']
+    BookSearch: typeof import('./components/molecules/book-search.vue')['default']
+    BookSingleDetailView: typeof import('./components/molecules/book-single-detail-view.vue')['default']
+    BookSingleListView: typeof import('./components/molecules/book-single-list-view.vue')['default']
+    BookTitle: typeof import('./components/atoms/book-title.vue')['default']
+    Comment: typeof import('./components/atoms/comment.vue')['default']
+    CommentForm: typeof import('./components/molecules/comment-form.vue')['default']
+    CommentManager: typeof import('./components/molecules/comment-manager.vue')['default']
+    ConsoleTopBooks: typeof import('./components/organisms/console-top-books.vue')['default']
+    Cover: typeof import('./components/atoms/cover.vue')['default']
     ICarbonLanguage: typeof import('~icons/carbon/language')['default']
     ICarbonMoon: typeof import('~icons/carbon/moon')['default']
     ICarbonSun: typeof import('~icons/carbon/sun')['default']
     ICarbonWarning: typeof import('~icons/carbon/warning')['default']
+    Pagination: typeof import('./components/atoms/pagination.vue')['default']
+    Rating: typeof import('./components/atoms/rating.vue')['default']
+    RFooter: typeof import('./components/r-footer.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Synopsis: typeof import('./components/atoms/synopsis.vue')['default']
+    Upvote: typeof import('./components/atoms/upvote.vue')['default']
+    UpvoteCount: typeof import('./components/atoms/upvote-count.vue')['default']
+    WithLink: typeof import('./components/atoms/with-link.vue')['default']
   }
 }

@@ -17,7 +17,7 @@ module.exports = {
               textDecoration: "underline",
               "&:hover": {
                 opacity: 1,
-                color: colors.teal[600]
+                color: colors.amber[600]
               }
             },
             b: { color: "inherit" },
