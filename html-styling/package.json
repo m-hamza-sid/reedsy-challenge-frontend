@@ -1,0 +1,12 @@
+{
+  "name": "@reedsy/html-styling",
+  "private": true,
+  "scripts": {
+    "build:less": "lessc styles/index.less dist/index.css",
+    "watch:less": "chokidar \"**/*.less\" -c \"npm run build:less\" --polling"
+  },
+  "devDependencies": {
+    "less": "4.1.3",
+    "chokidar-cli": "3.0.0"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "@reedsy/task",
+  "workspaces": [
+    "book-library-ui",
+    "book-library-server",
+    "html-styling"
+  ],
+  "scripts": {
+    "clean:node_modules": "rm -rf node_modules packages/**/node_modules"
+  },
+  "version": "1.0.0",
+  "description": "Reedsy task for front end engineer position",
+  "author": "Muhammad Hamza",
+  "license": "ISC"
+}

@@ -1,0 +1,218 @@
+@import 'reset';
+@import (css) url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+html {
+  font-size: 87.5%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #404040;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.071rem;
+}
+
+h1 {
+  font-size: 3.652rem;
+}
+
+h2 {font-size: 3.041rem;}
+
+h3 {font-size: 1.953rem;}
+
+h4 {font-size: 1.563rem;}
+
+h5 {font-size: 1.25rem;}
+
+small, .text_small {font-size: 0.8rem;}
+
+body {
+  background-color: #FAF9F3;
+  font-weight: 400;
+  line-height: 1.75;
+  display: grid;
+  grid: "header" min-content
+        "content" 1fr
+        / auto;
+  width: 80%;
+  margin: auto;
+
+  .top-actions {
+    grid-area: header;
+    font-weight: 500;
+    font-size: 1.25rem;
+
+    .container {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      padding: 1.429rem 0;
+      width: 95%;
+      margin: auto;
+
+      .top-logo {
+        padding: 0.571rem;
+        min-width: 240px;
+        text-align: center;
+        background-color: #CCCCCC;
+        border-radius: 8px;
+      }
+      .top-menu {
+        ul {
+          flex-flow: row nowrap;
+          display: flex;
+          li {
+            padding: 0.571rem 1.429rem;
+            cursor: pointer;
+            border-radius: 8px;
+            &:hover {
+              background-color: #EEC000;
+              color: #FFFFFF;
+            }
+          }
+        }
+      }
+    }
+  }
+  .main {
+    grid-area: content;
+    display: flex;
+    box-shadow: 0 3px 15px 0 rgba(0,0,0,0.2);
+    border-radius: 14px;
+    margin: 0.714rem 0 6rem 0;
+    .container {
+      .mixin-padding-container() {
+        padding: 2.5rem;
+      }
+      h1 {
+        background-color: #fff;
+        .mixin-padding-container();
+        border-radius: 14px 14px 0 0;
+        margin: 0;
+      }
+      .featured-book {
+        position: relative;
+        display: flex;
+        .mixin-padding-container();
+        gap: 1.571rem;
+
+        .recommended {
+          position: absolute;
+          right: 0;
+          top: 0;
+          background-color: #EEC000;
+          padding: 0.286rem 1rem;
+          font-size: 1.1rem;
+          font-weight: 500;
+          letter-spacing: 0.5px;
+          color: #FFF;
+          border-radius: 0 0 0 14px;
+        }
+        img {
+          border-radius: 14px;
+          height: max-content;
+        }
+        .book-info {
+          .title {
+            font-weight: 900;
+          }
+          .author {
+            font-size: 1.25rem;
+            line-height: 1;
+          }
+          .synopsis {
+            margin-top: 1.4rem;
+            font-size: 1.5rem;
+            line-height: 1.8rem;
+            letter-spacing: -0.029rem;
+
+            p + p {
+              margin-top: 1rem;
+            }
+          }
+        }
+      }
+      .top-voted {
+        .mixin-padding-container();
+        background-color: #FFFFFF;
+
+        h2 {
+          margin-top: 1.5rem;
+          font-weight: 900;
+        }
+        .books-list {
+          display: flex;
+          flex: 1;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 2rem;
+          padding: 2rem 0;
+
+          .book {
+            background-color: #FAF9F3;
+            display: flex;
+            flex: 1 1 406px;
+            flex-direction: column;
+            box-sizing: border-box;
+            max-width: 406px;
+            gap: 1.25rem;
+            position: relative;
+            padding: 1.8rem;
+            border-radius: 16px;
+
+            .position {
+              position: absolute;
+              right: 0;
+            }
+            img {
+              border-radius: 14px;
+              max-height: 260px;
+              margin: 0 auto;
+              box-shadow: 0 3px 10px 1px rgba(0,0,0,0.2);
+            }
+            .book-info {
+              .title {
+                font-size: 1.563rem;
+                font-weight: 900;
+                letter-spacing: -0.005rem;
+                line-height: 1.8rem;
+              }
+              .author {
+                font-size: 1.25rem;
+              }
+              .synopsis {
+                margin-top: 1rem;
+                font-size: 1.25rem;
+                line-height: 1.6rem;
+                font-weight: 500;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  footer {
+    background: #303030;
+    color: #FFFFFF;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    .container {
+      nav {
+        ul {
+          display: flex;
+          justify-content: center;
+          li {
+            padding: 1rem 2.5rem;
+          }
+        }
+      }
+    }
+  }
+}

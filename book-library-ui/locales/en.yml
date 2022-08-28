@@ -1,0 +1,11 @@
+button:
+  back: Back
+  go: GO
+  home: Home
+  toggle_dark: Toggle dark mode
+  toggle_langs: Change languages
+intro:
+  desc: Reedsy Task
+book:
+  title:
+not-found: Not found
