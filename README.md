@@ -2,7 +2,9 @@
 
 ## Deployed Solution
 The solution is deployed at:
-Vue App: https://reedsy-task-client-library.vercel.app/
+
+Vue App: https://reedsy-task-client-library.vercel.app/ - Might take a few seconds to load due to free hosting.
+
 Styling Page: https://reedsy-task-vue.vercel.app/
 
 Note: The deployed vue app doesn't display images as the server provided injects localhost url 
