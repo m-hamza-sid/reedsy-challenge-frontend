@@ -241,7 +241,7 @@ Other details have also penalized the test, such as: having installed and config
 single smoke test, or having implemented internationalization, and then leaving the translation files half empty.
 ```
 
-## My Request for objective feedback - No response received.
+## My Request for objective feedback.
 
 ```
 Dear <recruiter>,
@@ -267,3 +267,10 @@ is not part of official requirements is being used to penalise the solution?
 
 Can the team please answer my above questions?
 ```
+
+## Responses
+### Response 1
+![Response-1](./requirements/responses/response-1.png)
+
+### Response 2
+![Response-2](./requirements/responses/response-2.png)
